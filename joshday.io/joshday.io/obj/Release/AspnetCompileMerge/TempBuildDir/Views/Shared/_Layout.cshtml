@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>joshday.io - @ViewBag.Title</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!-- Main Navigation -->
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container smooth-scroll">
+                <a class="navbar-brand" href="#"><strong>JoshDay.io</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" data-offset="60">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio" data-offset="60">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resume" data-offset="60">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" data-offset="60">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline">
+                        <div class="md-form my-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Intro Section -->
+        <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(../../Content/img/header-img.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="mask rgba-stylish-light">
+                <div class="container h-100 d-flex justify-content-center align-items-center">
+                    <div class="row pt-5 mt-3">
+                        <div class="col-md-12 mb-3">
+                            <div class="intro-info-content text-center">
+                                <h1 class="display-3 white-text mb-5 wow fadeInDown" data-wow-delay="0.3s">JOSH <a class="white-text font-weight-bold">DAY</a></h1>
+                                <h5 class="text-uppercase white-text mb-5 mt-1 font-weight-bold wow fadeInDown" data-wow-delay="0.3s">Software Engineer | Computer Nerd | Gamer | Gearhead | Amateur Photographer</h5>
+                                <a class="btn btn-light-blue btn-lg wow fadeInDown" data-wow-delay="0.3s">portfolio</a>
+                                <a class="btn btn-indigo btn-lg wow fadeInDown" data-wow-delay="0.3s">About</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Main Navigation -->
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - JoshDay.io</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery-mdb")
+    @Scripts.Render("~/bundles/popper")
+    @Scripts.Render("~/bundles/bootstrap-mdb")
+    @Scripts.Render("~/bundles/mdbootstrap")
+    @Scripts.Render("~/bundles/mdbootstrap-addons")
+    @Scripts.Render("~/bundles/mdbootstrap-addons-pro")
+    @Scripts.Render("~/bundles/mdbootstrap-modules")
+    @RenderSection("scripts", required: false)
+    <script>
+        new WOW().init();
+
+        // MDB Lightbox Init
+        $(function () {
+            //$("#mdb-lightbox-ui").load("../mdb-addons/mdb-lightbox-ui.html");
+        });
+
+    </script>
+</body>
+</html>
